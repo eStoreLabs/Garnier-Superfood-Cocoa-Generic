@@ -361,7 +361,15 @@
 }
 #es-garnier.es-garnier .es-benefits__single p {
   font-size: 12px;
+  max-width: 15ch;
 }
+
+@media screen and (min-width: 420px) {
+  #es-garnier.es-garnier .es-benefits__single p {
+    max-width: unset;
+  }
+}
+
 #es-garnier.es-garnier .es-benefits__number {
   margin-right: 10px;
 }
@@ -589,9 +597,26 @@
 #es-garnier.es-garnier .es-footer {
   width: 100%;
   margin: 0;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-around;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#30663f),
+      color-stop(#167535),
+      to(#30663f)
+    );
+    background: linear-gradient(to right, #30663f, #167535, #30663f);
 }
 #es-garnier.es-garnier .es-footer img {
-  max-width: 100%;
+  width: 20%;
+}
+
+#es-garnier.es-garnier .es-footer img:nth-child(2) {
+  width: 15%;
 }
 
 @media (max-width: 650px) {
@@ -621,7 +646,7 @@
   }
   #es-garnier.es-garnier .es-avo__single {
     width: 500px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
   #es-garnier.es-garnier .es-green__imgCtn {
     max-width: 300px;
